@@ -1,4 +1,4 @@
-import  {store, rootReducer } from "../services/store";
+import { store, rootReducer } from "../services/store";
 export type AppDispatch = typeof store.dispatch;
 export type TServerResponse<T> = {
   success: boolean;
@@ -11,9 +11,11 @@ export type TRefreshResponse = TServerResponse<{
 export type TItem = {
   id: string;
   title: string;
-  description: string; 
+  description: string;
   img?: string;
-    images: Array<string | { id: number; image_url: string; sort_order?: number }>;
+  images: Array<
+    string | { id: number; image_url: string; sort_order?: number }
+  >;
   fulldescription?: string;
   isFavorite?: boolean;
 };
@@ -34,12 +36,6 @@ export const enum RequestStatus {
   Failed = "Failed",
 }
 
-
-
 export type TItemsResponse = TServerResponse<{
   items: TItem[];
 }>;
-
-
-
-
