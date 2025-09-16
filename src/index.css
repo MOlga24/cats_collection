@@ -523,12 +523,18 @@ header .active {
 .empty h5{
    text-align: center;
 }
-.empty .button {
-  background-color: #d9d9d9;
-  display: flex;
-  justify-content: center;
+.empty .button_empty {
+  background-color: #c469f8;
+border-radius: 10px;
+  width: 100%;
+  padding: 16px 18px;
+  color: white;
+  border: none;
+  font-family: "Inter";
+  font-size: 20px;
+  text-align: center;
 }
-.empty .button:hover {
+.empty .button_empty:hover {
   background-color: #ab17f0;
 }
 

@@ -31,7 +31,7 @@ export const ScrollToTop = () => {
       onClick={scrollToTop}
       aria-label="Перемотка вверх"
     >
-      <ArrowUpIcon size={20} />
+      <ArrowUpIcon size={20}  color={ '#c469f8'}/>
     </button>
   );
 };
