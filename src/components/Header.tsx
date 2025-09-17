@@ -5,9 +5,10 @@ import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { RootState, useDispatch } from "../services/store";
 import { FiHeart } from "react-icons/fi";
-import { searchItems } from "../utils/search";
+
 import { getImagePath } from "../utils/utils";
 import AddItemModal from "./AddItemModal";
+import { searchItems } from "../utils/search";
 
 interface SearchItem {
   id: string;
@@ -64,7 +65,11 @@ export default function Header() {
     <header className="header">
       <div className="main_menu">
         <div className="sub_menu_search">
-          <div className="search_left_icon">
+          <div className="search_left_icon" onClick={() => {
+                setIsClicked(true);
+                navigate("/favorite");
+              }}>
+            <p>Посмотреть избранное</p>
             <HeartIcon
               tabIndex={0}
               className="icon_fav"
