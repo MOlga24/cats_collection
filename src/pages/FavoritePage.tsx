@@ -14,7 +14,7 @@ interface BreadcrumbItem {
 }
 export const Favorite = () => {
   const breadcrumbsItems: BreadcrumbItem[] = [
-    { label: "Главная", link: "/products" },
+    { label: "Главная", link: "/items" },
     { label: "Избранное" },
   ];
 

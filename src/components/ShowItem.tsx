@@ -9,7 +9,12 @@ import { FiHeart, FiX, FiTrash2 } from "react-icons/fi";
 import { Link, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "../services/store";
 import { RootState, TItem } from "../utils/types";
-import { removeItem } from "../services/slices/itemsSlice";
+
+import {
+  FavoriteItemsSelector,
+  removeItem,
+  selectFavoriteItems,
+} from "../services/slices/itemsSlice";
 
 export interface ShowItemProps {
   item: TItem;
@@ -24,7 +29,7 @@ const ShowItem = React.memo(
     const [isModalOpen, setIsModalOpen] = useState(false);
     const descriptionRef = useRef<HTMLDivElement>(null);
     const reviewsRef = useRef<HTMLDivElement>(null);
-    const favoriteItems = useSelector((state: RootState) => state.items.items);
+    const favoriteItems = useSelector(FavoriteItemsSelector);
     const isFavorite = favoriteItems.some((favItem) => favItem.id === item.id);
     const navigate = useNavigate();
     const dispatch = useDispatch();
@@ -73,7 +78,7 @@ const ShowItem = React.memo(
         e.preventDefault();
         e.stopPropagation();
 
-        if (window.confirm("Вы уверены, что хотите удалить этот товар?")) {
+        if (window.confirm("Вы уверены, что хотите удалить эту карточку?")) {
           dispatch(removeItem(item.id));
           navigate("/");
         }
@@ -91,7 +96,7 @@ const ShowItem = React.memo(
     if (!item) {
       return (
         <div className="item-not-found">
-          <h2>Товар не найден</h2>
+          <h2>Карточка не найдена</h2>
           <p>Попробуйте вернуться на главную страницу</p>
           <Link to="/">На главную</Link>
         </div>

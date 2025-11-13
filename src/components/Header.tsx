@@ -118,7 +118,7 @@ export default function Header() {
                     )}
                     <div>
                       <p>{item.title}</p>
-                      <p>{item.price} ₽</p>
+                      <p>{item.price} </p>
                     </div>
                   </NavLink>
                 ))}
