@@ -3,18 +3,18 @@ export const getItemsCountText = (count: number) => {
   const lastTwoDigits = count % 100;
 
   if (lastTwoDigits >= 11 && lastTwoDigits <= 19) {
-    return `Найдено ${count} товаров`;
+    return `Найдено ${count} фото`;
   }
 
   if (lastDigit === 1) {
-    return `Найден ${count} товар`;
+    return `Найдено ${count} фото`;
   }
 
   if (lastDigit >= 2 && lastDigit <= 4) {
-    return `Найдено ${count} товара`;
+    return `Найдено ${count} фото`;
   }
 
-  return `Найдено ${count} товаров`;
+  return `Найдено ${count} фото`;
 };
 
 export const getImagePath = (

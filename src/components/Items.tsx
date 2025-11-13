@@ -17,11 +17,11 @@ export const Items = React.memo(({ items }: ItemsProps) => {
   };
 
   if (!items || !Array.isArray(items)) {
-    return <p>Товары отсутствуют</p>;
+    return <p>Фото отсутствуют</p>;
   }
 
   if (items.length === 0) {
-    return <p>Товары не найдены</p>;
+    return <p>Фото не найдены</p>;
   }
 
   return (

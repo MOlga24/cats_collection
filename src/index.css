@@ -138,6 +138,7 @@ header .icon_search:hover {
   font-weight: 800;
 }
 .favorites_count {
+  padding-top:10px;
   display: flex;
   justify-self: center;
 }
@@ -515,6 +516,17 @@ header .active {
   text-align: center;
   margin-left: 50px;
 }
+.empty .button_empty_fav {
+  background-color: #c469f8;
+  border-radius: 10px;
+  width: 100%;
+  padding: 16px 18px;
+  color: white;
+  border: none;
+  font-family: "Inter";
+  font-size: 20px;
+  text-align: center;
+}
 .empty .button_empty:hover {
   background-color: #ab17f0;
 }
@@ -664,7 +676,7 @@ header .active {
 .item_image_container {
   display: flex;
   height: fit-content;
-  margin: 10px;
+  padding: 10px;
 }
 
 .icon_favorite {
@@ -964,6 +976,7 @@ header .active {
 
   .sub_menu_search {
     flex-direction: column;
+    width:auto;
     gap: 15px;
     padding: 15px;
   }
@@ -1013,7 +1026,7 @@ header .active {
 
   main,
   .favorite_main {
-    padding: 20px 10px;
+    padding: 0;
     gap: 15px;
   }
 
@@ -1260,8 +1273,8 @@ header .active {
   .icon_plus,
   .icon_trash,
   .icon_user {
-    min-height: 44px;
-    min-width: 44px;
+    max-height: 44px;
+    max-width: 44px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1294,7 +1307,7 @@ header .active {
 
   main .item img,
   .favorite_main .item img {
-    height: 180px;
+    height: 280px;
   }
 
   .full_item_image_icons {
@@ -1318,7 +1331,49 @@ header .active {
     text-align: center;
   }
 }
+@media (max-width: 375px) {
 
+  .search_right_icon p {
+    font-size: 14px;
+  }
+   .search_left_icon p {
+    font-size: 14px;
+  }
+  .empty {
+    width: auto;
+  }
+  .icon_fav,
+  .icon_plus {
+    width: 24px!important;
+    height: 24px!important;
+  }
+
+  main .item img,
+  .favorite_main .item img {
+    height: 280px;
+  }
+
+  .full_item_image_icons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .item_price_container {
+    width: 100%;
+    padding: 20px 10px;
+  }
+
+  .item_price_container .item_price {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .item_price_container .delivery {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+}
 @media (max-width: 768px) {
   * {
     transition: all 0.2s ease;

@@ -23,7 +23,7 @@
     "redux-persist": "^6.0.0",
     "uuid": "^13.0.0",
     "web-vitals": "^2.1.4"
-  },
+  },"homepage": "https://MOlga24.github.io/cats_collection",
   "scripts": {
     "start": "react-scripts start",
     "dev": "npm run start",
