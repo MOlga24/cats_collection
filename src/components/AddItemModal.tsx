@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, ReactElement } from 'react';
 import { FiX, FiUpload } from 'react-icons/fi';
 import { useDispatch } from 'react-redux';
 import { AppDispatch } from '../services/store';
@@ -11,11 +11,10 @@ interface AddItemModalProps {
   onClose: () => void;
 }
 
-const AddItemModal: React.FC<AddItemModalProps> = ({ isOpen, onClose }) => {
+const AddItemModal: React.FC<AddItemModalProps> = ({ isOpen, onClose }): ReactElement | null => {
   const dispatch = useDispatch<AppDispatch>();
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
-  const [imageFile, setImageFile] = useState<File | null>(null);
   const [imagePreview, setImagePreview] = useState<string>('');
   const [errors, setErrors] = useState<{title?: string; description?: string; image?: string}>({});
   const fileInputRef = useRef<HTMLInputElement>(null);
@@ -52,7 +51,6 @@ const AddItemModal: React.FC<AddItemModalProps> = ({ isOpen, onClose }) => {
   const handleImageUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (file) {
-      setImageFile(file);
       const reader = new FileReader();
       reader.onload = (e) => {
         setImagePreview(e.target?.result as string);
@@ -86,7 +84,6 @@ const AddItemModal: React.FC<AddItemModalProps> = ({ isOpen, onClose }) => {
   const resetForm = () => {
     setTitle('');
     setDescription(''); 
-    setImageFile(null);
     setImagePreview('');
     setErrors({});
   };

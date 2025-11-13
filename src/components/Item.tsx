@@ -33,7 +33,7 @@ const Item = ({ item, isFavoritePage, toggleFavoriteItem }: ItemProps) => {
   }, [item.images]);
   const isFavorite = useSelector((state: RootState) =>
     state.items.items.some(
-      (favItem) => favItem.id === item.id && favItem.isFavorite
+      (favItem:TItem) => favItem.id === item.id && favItem.isFavorite
     )
   );
   const handleDeleteClick = useCallback(

@@ -29,7 +29,7 @@ const ShowItem = React.memo(
     const descriptionRef = useRef<HTMLDivElement>(null);
     const reviewsRef = useRef<HTMLDivElement>(null);
     const favoriteItems = useSelector(FavoriteItemsSelector);
-    const isFavorite = favoriteItems.some((favItem) => favItem.id === item.id);
+    const isFavorite = favoriteItems.some((favItem:TItem) => favItem.id === item.id);
     console.log(favoriteItems);
     const navigate = useNavigate();
     const dispatch = useDispatch();

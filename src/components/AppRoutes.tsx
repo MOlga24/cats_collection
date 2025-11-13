@@ -17,7 +17,7 @@ const AppRoutes = () => {
   useEffect(() => {
     dispatch(fetchItems())
       .unwrap()
-      .catch((err) => console.error("Fetch error:", err));
+      .catch((err:any) => console.error("Fetch error:", err));
   }, [dispatch]);
 
   if (isLoading) return <div>Loading...</div>;
