@@ -48,7 +48,7 @@ export const ItemFull = () => {
   }, [item, foundItem]);
 
   const breadcrumbsItems = [
-    { label: "Главная", link: "/products" },
+    { label: "Главная", link: "/items" },
     { label: item?.title || "Товар" },
   ];
 

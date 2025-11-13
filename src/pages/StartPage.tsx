@@ -4,7 +4,7 @@ export const StartPage = () => {
   const navigate = useNavigate();
   return (
     <div className="empty">
-      <button className="button" onClick={() => navigate("/items")}>
+      <button className="main_button" onClick={() => navigate("/items")}>
         Посмотреть котиков
       </button>
     </div>

@@ -148,7 +148,7 @@ const ShowItem = React.memo(
             </div>
           </div>{" "}
           <div className="full_item_button">
-            <button className="button" onClick={() => navigate("/products")}>
+            <button className="button" onClick={() => navigate("/items")}>
               Вернуться на главную
             </button>
           </div>

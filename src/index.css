@@ -21,6 +21,7 @@ body {
 .App {
   width: 1440px;
   margin: 0px auto;
+
 }
 header {
   position: relative;
@@ -126,7 +127,6 @@ header .icon_search:hover {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  width: 100%;
   height: max-content;
   gap: 20px;
   padding: 20px 20px;
@@ -138,7 +138,7 @@ header .icon_search:hover {
   font-weight: 800;
 }
 .favorites_count {
-  padding-top:10px;
+  padding-top: 10px;
   display: flex;
   justify-self: center;
 }
@@ -171,11 +171,12 @@ header .icon_search:hover {
 }
 
 .search {
-  width: 100%;
   padding: 10px 40px 10px 35px;
   border-radius: 20px;
   border: none;
   font-size: 16px;
+  margin-left: 160px;
+
 }
 
 .icon_search {
@@ -312,6 +313,7 @@ main b {
   display: flex;
   justify-self: start;
   gap: 18px;
+  padding-left: 15px;
 }
 .item_sub_menu {
   display: flex;
@@ -324,6 +326,7 @@ main b {
   font-size: 16px;
   color: #555;
   transition: all 0.3s ease;
+  text-wrap: nowrap;
 }
 
 .item_menu p:hover {
@@ -499,7 +502,8 @@ header .active {
   width: 276px;
   color: #000;
   flex-direction: column;
-  justify-self: center;
+justify-self: center;
+ 
 }
 .empty h5 {
   text-align: center;
@@ -527,6 +531,18 @@ header .active {
   font-size: 20px;
   text-align: center;
 }
+.main_button {
+  background-color: #c469f8;
+  border-radius: 10px;
+  padding: 16px 18px;
+  color: white;
+  border: none;
+  font-family: "Inter";
+  font-size: 20px;
+  text-align: center;
+
+}
+
 .empty .button_empty:hover {
   background-color: #ab17f0;
 }
@@ -537,6 +553,7 @@ header .active {
   align-items: center;
   justify-content: space-between;
   margin-bottom: 15px;
+   padding-left: 15px;
 }
 .item_article {
   border: 1px solid #d9d9d9;
@@ -976,7 +993,7 @@ header .active {
 
   .sub_menu_search {
     flex-direction: column;
-    width:auto;
+    width: auto;
     gap: 15px;
     padding: 15px;
   }
@@ -1004,6 +1021,7 @@ header .active {
   .search {
     font-size: 14px;
     padding: 8px 35px 8px 30px;
+     margin-left: 0;
   }
 
   .icon_search {
@@ -1011,7 +1029,10 @@ header .active {
     width: 18px;
     height: 18px;
   }
-
+.icon {
+  width: 24px;
+  height: 24px;
+}
   .icon_fav,
   .icon_plus {
     width: 20px;
@@ -1032,16 +1053,18 @@ header .active {
 
   main .item,
   .favorite_main .item {
-    width: 100%;
-    height: auto;
+    width: 420px;
+    height: 460px;
+   
     margin-bottom: 25px;
     padding: 10px;
   }
 
   main .item img,
   .favorite_main .item img {
-    height: 200px;
+    height: 230px;
     padding: 20px 0;
+    object-fit: contain;
   }
 
   main h2 {
@@ -1056,17 +1079,19 @@ header .active {
   }
 
   .item_menu {
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;  
+   
+    padding-left: 15px;
   }
 
   .item_menu p {
     font-size: 14px;
-    padding-bottom: 5px;
+    padding-bottom: 5px; padding-left: 30px;
   }
 
   .full_item {
+    width: auto;
     flex-direction: column;
     gap: 20px;
     padding: 15px;
@@ -1079,6 +1104,7 @@ header .active {
 
   .full_item_title {
     font-size: 20px;
+    padding-left:15px ;
   }
 
   .item_article {
@@ -1087,8 +1113,9 @@ header .active {
   }
 
   .full_item_image_icons {
-    width: 100%;
+    width: auto;
     padding: 10px;
+    flex-wrap: nowrap;
   }
 
   .full_item_sub_title {
@@ -1266,8 +1293,14 @@ header .active {
     width: 100%;
     padding: 12px;
   }
+ .item_menu p
+  {  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
-  .item_menu p,
+
   .button,
   .icon_fav,
   .icon_plus,
@@ -1305,13 +1338,10 @@ header .active {
     height: 18px;
   }
 
-  main .item img,
-  .favorite_main .item img {
-    height: 280px;
-  }
 
   .full_item_image_icons {
-    flex-direction: column;
+   
+    width: auto;
     gap: 10px;
   }
 
@@ -1332,11 +1362,10 @@ header .active {
   }
 }
 @media (max-width: 375px) {
-
   .search_right_icon p {
     font-size: 14px;
   }
-   .search_left_icon p {
+  .search_left_icon p {
     font-size: 14px;
   }
   .empty {
@@ -1344,8 +1373,8 @@ header .active {
   }
   .icon_fav,
   .icon_plus {
-    width: 24px!important;
-    height: 24px!important;
+    width: 24px !important;
+    height: 24px !important;
   }
 
   main .item img,
@@ -1354,7 +1383,7 @@ header .active {
   }
 
   .full_item_image_icons {
-    flex-direction: column;
+  
     gap: 10px;
   }
 
