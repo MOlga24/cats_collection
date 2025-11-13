@@ -2,6 +2,7 @@
   "name": "cats",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://MOlga24.github.io/cats_collection",
   "dependencies": {
     "@reduxjs/toolkit": "^2.9.0",
     "@testing-library/dom": "^10.4.0",
