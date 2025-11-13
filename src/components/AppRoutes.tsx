@@ -30,7 +30,7 @@ const AppRoutes = () => {
         <Route path="/" element={<StartPage />} />
         <Route path="/items" element={<Home />} />
         <Route path="/favorite" element={<Favorite />} />       
-        <Route path="/product/:id" element={<ItemFull />} />{" "}
+        <Route path="/item/:id" element={<ItemFull />} />{" "}
       </Routes>
     </div>
   );

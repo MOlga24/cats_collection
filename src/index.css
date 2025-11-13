@@ -21,7 +21,6 @@ body {
 .App {
   width: 1440px;
   margin: 0px auto;
-
 }
 header {
   position: relative;
@@ -176,12 +175,12 @@ header .icon_search:hover {
   border: none;
   font-size: 16px;
   margin-left: 160px;
-
 }
 
 .icon_search {
   position: absolute;
-  left: 10px;
+  right: 210px;
+  top: 10px;
   color: #5b6468;
   z-index: 2;
 }
@@ -502,8 +501,7 @@ header .active {
   width: 276px;
   color: #000;
   flex-direction: column;
-justify-self: center;
- 
+  justify-self: center;
 }
 .empty h5 {
   text-align: center;
@@ -540,7 +538,6 @@ justify-self: center;
   font-family: "Inter";
   font-size: 20px;
   text-align: center;
-
 }
 
 .empty .button_empty:hover {
@@ -553,7 +550,7 @@ justify-self: center;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 15px;
-   padding-left: 15px;
+  padding-left: 15px;
 }
 .item_article {
   border: 1px solid #d9d9d9;
@@ -1021,18 +1018,19 @@ justify-self: center;
   .search {
     font-size: 14px;
     padding: 8px 35px 8px 30px;
-     margin-left: 0;
+    margin-left: 0;
   }
 
   .icon_search {
     left: 8px;
+    top: 8px;
     width: 18px;
     height: 18px;
   }
-.icon {
-  width: 24px;
-  height: 24px;
-}
+  .icon {
+    width: 24px;
+    height: 24px;
+  }
   .icon_fav,
   .icon_plus {
     width: 20px;
@@ -1055,7 +1053,7 @@ justify-self: center;
   .favorite_main .item {
     width: 420px;
     height: 460px;
-   
+
     margin-bottom: 25px;
     padding: 10px;
   }
@@ -1080,14 +1078,15 @@ justify-self: center;
 
   .item_menu {
     display: flex;
-    flex-wrap: wrap;  
-   
+    flex-wrap: wrap;
+
     padding-left: 15px;
   }
 
   .item_menu p {
     font-size: 14px;
-    padding-bottom: 5px; padding-left: 30px;
+    padding-bottom: 5px;
+    padding-left: 30px;
   }
 
   .full_item {
@@ -1104,7 +1103,7 @@ justify-self: center;
 
   .full_item_title {
     font-size: 20px;
-    padding-left:15px ;
+    padding-left: 15px;
   }
 
   .item_article {
@@ -1293,13 +1292,11 @@ justify-self: center;
     width: 100%;
     padding: 12px;
   }
- .item_menu p
-  {  
+  .item_menu p {
     display: flex;
     align-items: center;
     justify-content: center;
   }
-
 
   .button,
   .icon_fav,
@@ -1338,9 +1335,7 @@ justify-self: center;
     height: 18px;
   }
 
-
   .full_item_image_icons {
-   
     width: auto;
     gap: 10px;
   }
@@ -1383,7 +1378,6 @@ justify-self: center;
   }
 
   .full_item_image_icons {
-  
     gap: 10px;
   }
 

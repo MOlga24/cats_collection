@@ -1,14 +1,12 @@
-
 import { BrowserRouter as Router } from "react-router-dom";
 import AppRoutes from "./components/AppRoutes";
 
 const App: React.FC = () => {
   return (
-      <Router>
+    <Router basename="/cats_collection">
       <AppRoutes />
-      </Router>
+    </Router>
   );
-
 };
 
 export default App;

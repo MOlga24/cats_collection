@@ -82,7 +82,7 @@ const Item = ({ item, isFavoritePage, toggleFavoriteItem }: ItemProps) => {
         <FiTrashIcon onClick={handleDeleteClick} className="icon_delete" />
       </div>
       <Link
-        to={`/product/${item.id}`}
+        to={`/item/${item.id}`}
         state={{ item }}
         style={{ textDecoration: "none", color: "inherit" }}
       >
